@@ -68,7 +68,7 @@ async function processScript(filePath) {
       ast: true,
     });
     ast = result.ast;
-    code = await transformJs(result.code);
+    code = await transformJs(result.code).code;
   } catch (error) {
     console.error(`Failed to compile ${filePath}`);
 
@@ -137,7 +137,7 @@ async function processStyle(filePath) {
   let css;
   try {
     const result = await postcss(plugins).process(source, options);
-    css = await transformWxss(result.css);
+    css = (await transformWxss(result.css)).css;
   } catch (error) {
     console.error(`Failed to compile ${filePath}`);
 

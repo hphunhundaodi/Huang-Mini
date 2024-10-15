@@ -45,3 +45,20 @@ pnpm lint:style
 ```sh
 pnpm type-check
 ```
+
+## Issues
+```sh
+WARN  Issues with peer dependencies found
+.
+└─┬ @rollup/plugin-commonjs 28.0.0
+  └─┬ fdir 6.4.0
+    └── ✕ unmet peer picomatch@"^3 || ^4": found 2.3.1
+
+fixed package.json
+
+"pnpm": {
+  "overrides": {
+    "picomatch": "^4.0.0"
+  }
+}
+```
