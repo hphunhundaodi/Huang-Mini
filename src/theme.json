@@ -2,7 +2,7 @@
   "light": {
     "style": "black",
     "color": "#181818",
-    "bgColor": "#ffffff",
+    "bgColor": "#155e75",
     "homeIcon": "/images/home-light.png",
     "homeSelectedIcon": "/images/home-light-selected.png",
     "mineIcon": "/images/mine-light.png",

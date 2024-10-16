@@ -1,6 +1,14 @@
-<view class="p-4">
-  <mp-searchbar placeholder="活动编号" cancel="{{ false }}" search="{{search}}" bindinput="selectResult" />
-  <view
+<view class="bg-cyan-800">
+  <mp-searchbar value="{{searchQuery.activityId}}" placeholder="活动编号" cancel="{{ false }}" search="{{inputChange}}" bindinput="selectResult" bindclear="selectResult" />
+  <view class="h-[calc(100vh-104px)] flex flex-wrap justify-between overflow-y-auto">
+    <view class="w-full p-2" wx:for="{{tableData}}" wx:key="id">
+      <view class="bg-white rounded-lg shadow-md p-4">
+        <view class="text-lg font-bold mb-2">{{ item.name }}</view>
+        <view class="text-gray-600">{{ item.id }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- <view
     class="aspect-[100/16.1] bg-[url(https://pic4.zhimg.com/80/v2-63755eaa318858e33445862d72581207.png)] bg-[length:100%_100%] bg-no-repeat">
   </view>
 
@@ -11,5 +19,5 @@
     <view class="text-sky-400"> + weapp-tailwindcss</view>
   </view>
 
-  <view class="{{bg}}">纯动态的背景颜色</view>
+  <view class="{{bg}}">纯动态的背景颜色</view> -->
 </view>
